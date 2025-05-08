@@ -2,7 +2,6 @@
 first draft of code. it does not work.
 
 
-
 var num = [25];
 var x = [];
 var y = [];
@@ -10,12 +9,12 @@ var y = [];
 function setup() {
   createCanvas(700, 600);
   colorMode(RGB, 255, 255, 255);
-  strokeWeight(1);
   
   for (var i = 0; i < num; i++){
     x[i] = 0;
     y[i] = 0;
   }
+  
 }
 
 
@@ -37,15 +36,16 @@ function draw() {
   //hair
   
   eyes(); //eyes
-
   
+  
+  
+
   mouthNeutral();
   if (keyIsPressed){
     if (key == 'm'){
       smileBig();
     } 
-  }
- if(keyIsPressed){
+  } else if(keyIsPressed){
    if(key == 'm' && UP_ARROW){
      smileSmol();
    }
@@ -85,10 +85,14 @@ pop();
 }
 
 function eyes (){
+  push();
   ellipse(300, 250, 50, 30)
   ellipse(400, 250, 50, 30);
+  strokeWeight(6);
+  fill('black');
   circle(300, 250, 20);
   circle(400, 250, 20);
+  pop();
 }
 
 function smileSmol(){
