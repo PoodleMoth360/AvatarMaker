@@ -6,9 +6,33 @@ var num = [25];
 var x = [];
 var y = [];
 
-let img;
+let imgEars;
+
 function preload() {
+  imgEars = loadImage('ears.JPEG');
+  loadImage('nose3.JPEG');
+  loadImage('nose4.JPEG');
+  loadImage('nose2.JPEG');
+  loadImage('eyes2.JPEG');
+  loadImage('eyes3.JPEG');
+  loadImage('mouth1.JPEG');
+  loadImage('mouth3.JPEG');
+  loadImage('mouth4.JPEG');
+  loadImage('mouth5.JPEG');
+  loadImage('hair1.JPEG');
+  loadImage('hair4.JPEG');
+  loadImage('hair5.JPEG');
+  loadImage('brows1.JPEG');
+  loadImage('brows2.JPEG');
+  loadImage('brows3.JPEG');
+  loadImage('stache1.JPEG');
+  loadImage('stache2.JPEG');
+  loadImage('glasses1.JPEG');
+  loadImage('brows3.JPEG');
+  
+  
 }
+
 
 function setup() {
   createCanvas(700, 600);
@@ -23,19 +47,10 @@ function setup() {
 
 
 function draw() {
-  background(220); 
+  background(250); 
 
   drawBase();
-  fill(150, 120, 110);
-  
-      //shade
-    if(keyIsPressed){
-    if(key == 's'){
-      for (var i = 0; i < num; i++){
-          fill(i * 40.5, 190, 150);
-      }
-    }
-  }
+
   
     //nose  
     if(keyIsPressed && key == 'n'){
@@ -45,6 +60,7 @@ function draw() {
   if(keyIsPressed && key == 'i'){
   }
   
+  //mouth
   mouthNeutral();
   if (keyIsPressed && key == 'm'){
     smileBig();
@@ -55,7 +71,7 @@ function draw() {
     }
  }
     
-    //shirt
+    //hat
   if(keyIsPressed && key == 'c'){
     
   }
@@ -72,8 +88,6 @@ function draw() {
     if(keyIsPressed && key == 'f'){
   }
     
-  //hat
-  
   //glasses
   if(keyIsPressed && key == 'g'){
   }
@@ -135,4 +149,7 @@ function mouthNeutral(){
   line(320, 340, 320, 360);
   line(390, 340, 390, 360);
 }
+
+
+
 
