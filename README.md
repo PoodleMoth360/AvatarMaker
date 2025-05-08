@@ -7,30 +7,54 @@ var x = [];
 var y = [];
 
 let imgEars;
+let imgNose2;
+let imgNose3;
+let imgNose4;
+let imgEyes2;
+let imgEyes3;
+let imgMouth1;
+let imgMouth3;
+let imgMouth4;
+let imgMouth5;
+let imgHair1;
+let imgHair4;
+let imgHair5;
+let imgBrows1;
+let imgBrows2;
+let imgBrows3;
+let imgStache1;
+let imgStache2;
+let imgGlasses1;
+let imgHat1;
+let imgHat2;
+let imgHat3;
+let imgHat4;
 
 function preload() {
   imgEars = loadImage('ears.JPEG');
-  loadImage('nose3.JPEG');
-  loadImage('nose4.JPEG');
-  loadImage('nose2.JPEG');
-  loadImage('eyes2.JPEG');
-  loadImage('eyes3.JPEG');
-  loadImage('mouth1.JPEG');
-  loadImage('mouth3.JPEG');
-  loadImage('mouth4.JPEG');
-  loadImage('mouth5.JPEG');
-  loadImage('hair1.JPEG');
-  loadImage('hair4.JPEG');
-  loadImage('hair5.JPEG');
-  loadImage('brows1.JPEG');
-  loadImage('brows2.JPEG');
-  loadImage('brows3.JPEG');
-  loadImage('stache1.JPEG');
-  loadImage('stache2.JPEG');
-  loadImage('glasses1.JPEG');
-  loadImage('brows3.JPEG');
-  
-  
+  imgNose3 = loadImage('Nose3.JPEG');
+  imgNose4 = loadImage('Nose4.JPEG');
+  imgNose2 = loadImage('Nose2.JPEG');
+  imgEyes2 = loadImage('Eyes2.JPEG');
+  imgEyes3 = loadImage('Eyes3.JPEG');
+  imgMouth1 = loadImage('Mouth1.JPEG');
+  imgMouth3 = loadImage('Mouth3.JPEG');
+  imgMouth4 = loadImage('Mouth4.JPEG');
+  imgMouth5 = loadImage('Mouth5.JPEG');
+  imgHair1 = loadImage('Hair1.JPEG');
+  imgHair4 = loadImage('Hair4.JPEG');
+  imgHair5 = loadImage('Hair5.JPEG');
+  imgBrows1 = loadImage('Brows1.JPEG');
+  imgBrows2 = loadImage('Brows2.JPEG');
+  imgBrows3 = loadImage('Brows3.JPEG');
+  imgStache1 = loadImage('Stache1.JPEG');
+  imgStache2 = loadImage('Stache2.JPEG');
+  imgGlasses1 = loadImage('Glasses1.JPEG');
+  imgHat1 = loadImage('Hat1.JPEG');
+  imgHat2 = loadImage('Hat2.JPEG');
+  imgHat3 = loadImage('Hat3.JPEG');
+  imgHat4 = loadImage('Hat4.JPEG');
+
 }
 
 
