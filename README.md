@@ -6,6 +6,10 @@ var num = [25];
 var x = [];
 var y = [];
 
+let img;
+function preload() {
+}
+
 function setup() {
   createCanvas(700, 600);
   colorMode(RGB, 255, 255, 255);
@@ -32,32 +36,49 @@ function draw() {
       }
     }
   }
-
-  //hair
+  
+    //nose  
+    if(keyIsPressed && key == 'n'){
+  }
   
   eyes(); //eyes
+  if(keyIsPressed && key == 'i'){
+  }
   
-  
-  
-
   mouthNeutral();
-  if (keyIsPressed){
-    if (key == 'm'){
-      smileBig();
-    } 
-  } else if(keyIsPressed){
-   if(key == 'm' && UP_ARROW){
-     smileSmol();
-   }
+  if (keyIsPressed && key == 'm'){
+    smileBig();
+  } 
+  if(keyIsPressed && keyCode == UP_ARROW){
+    if(mouseIsPressed){
+     smileSmol(); 
+    }
  }
+    
+    //shirt
+  if(keyIsPressed && key == 'c'){
+    
+  }
   
-  //nose, 3
-  //facialHair, beard/stache/both 3
+  //hair
+  if(keyIsPressed && key == 'h'){
+  }
+  
   //brows
-  //shirt 4
-  //hat, 2
-  //glasses, 1
+  if(keyIsPressed && key == 'b'){
+  }
+  
+    //facialHair
+    if(keyIsPressed && key == 'f'){
+  }
+    
+  //hat
+  
+  //glasses
+  if(keyIsPressed && key == 'g'){
+  }
 
+  
 }
 
 function drawBase(){
@@ -115,9 +136,3 @@ function mouthNeutral(){
   line(390, 340, 390, 360);
 }
 
-function frown(){
-  strokeWeight(0);
-  rect(300, 300, 100, 100);
-  strokeWeight(1);
-  arc(350, 350, 50, 40, 0, radians(180));
-}
