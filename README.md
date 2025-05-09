@@ -5,28 +5,14 @@ var num = [25];
 var x = [];
 var y = [];
 
-let imgNose2;
-let imgNose3;
-let imgNose4;
-let imgEyes2;
-let imgEyes3;
-let imgMouth1;
-let imgMouth3;
-let imgMouth4;
-let imgMouth5;
-let imgHair1;
-let imgHair4;
-let imgHair5;
-let imgBrows1;
-let imgBrows2;
-let imgBrows3;
-let imgStache1;
-let imgStache2;
-let imgGlasses1;
-let imgHat1;
-let imgHat2;
-let imgHat3;
-let imgHat4;
+let imgNose = [imgNose2, imgNose3, imgNose4];
+let imgEyes = [imgEyes1, imgEyes2, imgEyes3];
+let imgMouth = [imgMouth1, imgMouth3, imgMouth4, imgMouth5];
+let imgHair = [imgHair1, imgHair4, imgHair5];
+let imgBrows = [imgBrows1, imgBrows2, imgBrows3];
+let imgStache = [imgStache1, imgStache2];
+let imgGlasses = [imgGlasses1, imgGlasses2];
+let imgHat = [imgHat1, imgHat2, imgHat3, imgHat4];
 
 function preload() {
   imgNose3 = loadImage('Nose3.JPEG');
