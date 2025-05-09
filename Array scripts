@@ -4,7 +4,7 @@ let imgMouth = [imgMouth1, imgMouth3, imgMouth4, imgMouth5];
 let imgHair = [imgHair1, imgHair4, imgHair5];
 let imgBrows = [imgBrows1, imgBrows2, imgBrows3];
 let imgStache = [imgStache1, imgStache2];
-let imgGlasses1; = [imgGlasses1, imgGlasses2];
+let imgGlasses = [imgGlasses1, imgGlasses2];
 let imgHat = [imgHat1, imgHat2, imgHat3, imgHat4];
 
 image(imgBrows[imgBrows1], 300, 212);
