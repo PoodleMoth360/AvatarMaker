@@ -6,7 +6,6 @@ var num = [25];
 var x = [];
 var y = [];
 
-let imgEars;
 let imgNose2;
 let imgNose3;
 let imgNose4;
@@ -31,7 +30,6 @@ let imgHat3;
 let imgHat4;
 
 function preload() {
-  imgEars = loadImage('ears.JPEG');
   imgNose3 = loadImage('Nose3.JPEG');
   imgNose4 = loadImage('Nose4.JPEG');
   imgNose2 = loadImage('Nose2.JPEG');
@@ -54,9 +52,7 @@ function preload() {
   imgHat2 = loadImage('Hat2.JPEG');
   imgHat3 = loadImage('Hat3.JPEG');
   imgHat4 = loadImage('Hat4.JPEG');
-
 }
-
 
 function setup() {
   createCanvas(700, 600);
@@ -75,9 +71,8 @@ function draw() {
 
   drawBase();
 
-  
-    //nose  
-    if(keyIsPressed && key == 'n'){
+   nose(); //nose
+  if(keyIsPressed && key == 'n'){
   }
   
   eyes(); //eyes
@@ -95,7 +90,7 @@ function draw() {
     }
  }
     
-    //hat
+  //hat
   if(keyIsPressed && key == 'c'){
     
   }
@@ -107,9 +102,9 @@ function draw() {
   //brows
   if(keyIsPressed && key == 'b'){
   }
-  
-    //facialHair
-    if(keyIsPressed && key == 'f'){
+
+  //facialHair
+  if(keyIsPressed && key == 'f'){
   }
     
   //glasses
@@ -130,17 +125,6 @@ function drawBase(){
   rect(275, 370, 150, 100, 15); //neck
   ellipse(350, 260, 270, 330); //head
   
-  
-  ears();
-  
-  
-}
-
-function ears(){
-push();
-
-arc(185, 250, 80, 80, 0, radians(180));
-pop();
 }
 
 function eyes (){
@@ -174,6 +158,9 @@ function mouthNeutral(){
   line(390, 340, 390, 360);
 }
 
-
-
-
+function nose(){
+  strokeWeight(0);
+  rect(300, 300, 100, 100);
+  strokeWeight(1);
+  ellipse(350, 300, 25, 30);  
+}
