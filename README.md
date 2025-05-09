@@ -1,7 +1,6 @@
 # AvatarMaker
 first draft of code. it does not work.
 
-
 var num = [25];
 var x = [];
 var y = [];
@@ -65,7 +64,6 @@ function setup() {
   
 }
 
-
 function draw() {
   background(250); 
 
@@ -73,44 +71,98 @@ function draw() {
 
    nose(); //nose
   if(keyIsPressed && key == 'n'){
+    image(imgNose3, 350, 300);
   }
-  
+    if(keyIsPressed){
+     if(keyCode == RIGHT_ARROW && key == 'n'){
+    image(imgNose4, 350, 300);
+      }
+    }
+      if(keyIsPressed){
+     if(keyCode == LEFT_ARROW && key == 'n'){
+    image(imgNose2, 350, 300);
+      }
+    }      
+
   eyes(); //eyes
   if(keyIsPressed && key == 'i'){
+    image(imgEyes2, 350, 250);
+  }
+  if(keyIsPressed){
+    if(keyCode == SHIFT && key == 'i'){
+      image(imgEyes3, 350, 250);
+    }
   }
   
-  //mouth
-  mouthNeutral();
+  image(imgMouth1, 350, 350);   //mouth
   if (keyIsPressed && key == 'm'){
-    smileBig();
-  } 
-  if(keyIsPressed && keyCode == UP_ARROW){
-    if(mouseIsPressed){
-     smileSmol(); 
+    image(imgMouth5, 350, 350);
+  }
+  if(keyIsPressed){
+    if(key == 'm'&& keyCode == RIGHT_ARROW){
+     image(imgMouth3, 350, 350);
     }
  }
-    
+  if(keyIsPressed){
+    if(key == 'm'&& keyCode == RIGHT_ARROW){
+      image(imgMouth4, 350, 350);
+    }
+  }  
+  
   //hat
   if(keyIsPressed && key == 'c'){
-    
+  image(imgHat1, 350, 170);
   }
-  
-  //hair
+   if(keyIsPressed){
+    if(keyCode == RIGHT_ARROW && key == 'c'){
+      image(imgHat2, 350, 170);
+    }
+  }
+   if(keyIsPressed){
+    if(keyCode == LEFT_ARROW && key == 'c'){
+      image(imgHat3, 350, 170);
+    }
+  }
+   if(keyIsPressed){
+    if(keyCode == UP_ARROW && key == 'c'){
+      image(imgHat4, 350, 170);
+    }
+  }
+
+  image(imgHair1, 350, 200);   //hair
   if(keyIsPressed && key == 'h'){
+    image(imgHair5, 350, 200);
   }
-  
-  //brows
+    if(keyIsPressed){
+     if(keyCode == SHIFT && key == 'h'){
+    image(imgHair4, 350, 200);
+      }
+    } 
+
+  image(imgBrows1, 350, 210); //brows
   if(keyIsPressed && key == 'b'){
+      image(imgBrows2, 350, 210);
+  }
+  if(keyIsPressed){
+    if(keyCode == SHIFT && key == 'b'){
+        image(imgBrows3, 350, 210);
+    }
   }
 
   //facialHair
   if(keyIsPressed && key == 'f'){
+    image(imgStache1, 350, 315);
+  }
+  if(keyIsPressed){
+    if(keyCode == SHIFT && key == 'f'){
+      image(imgStache2, 350, 315);
+    }
   }
     
   //glasses
   if(keyIsPressed && key == 'g'){
+    image(imgGlasses1, 350, 250)
   }
-
   
 }
 
