@@ -1,10 +1,9 @@
 # AvatarMaker
-first draft of code. it does not work.
+3rd try at code. Remains faulty.
 
 var num = [25];
 var x = [];
 var y = [];
-
 let imgNose = [imgNose2, imgNose3, imgNose4];
 let imgEyes = [imgEyes1, imgEyes2, imgEyes3];
 let imgMouth = [imgMouth1, imgMouth3, imgMouth4, imgMouth5];
@@ -42,20 +41,16 @@ function preload() {
 function setup() {
   createCanvas(700, 600);
   colorMode(RGB, 255, 255, 255);
-  
   for (var i = 0; i < num; i++){
     x[i] = 0;
     y[i] = 0;
   }
-  
 }
 
 function draw() {
   background(250); 
-
   drawBase();
-
-   nose(); //nose
+   nose();
   if(keyIsPressed && key == 'n'){
     image(imgNose3, 350, 300);
   }
@@ -70,7 +65,7 @@ function draw() {
       }
     }      
 
-  eyes(); //eyes
+  eyes();
   if(keyIsPressed && key == 'i'){
     image(imgEyes2, 350, 250);
   }
@@ -80,62 +75,60 @@ function draw() {
     }
   }
   
-  image(imgMouth1, 350, 350);   //mouth
+  image(imgMouth1, 350, 370);   //mouth
   if (keyIsPressed && key == 'm'){
-    image(imgMouth5, 350, 350);
+    image(imgMouth5, 350, 370);
   }
   if(keyIsPressed){
     if(key == 'm'&& keyCode == RIGHT_ARROW){
-     image(imgMouth3, 350, 350);
+     image(imgMouth3, 350, 370);
     }
  }
   if(keyIsPressed){
     if(key == 'm'&& keyCode == RIGHT_ARROW){
-      image(imgMouth4, 350, 350);
+      image(imgMouth4, 350, 370);
     }
   }  
   
-  //hat
   if(keyIsPressed && key == 'c'){
-  image(imgHat1, 350, 170);
+  image(imgHat1, 350, 150);
   }
    if(keyIsPressed){
     if(keyCode == RIGHT_ARROW && key == 'c'){
-      image(imgHat2, 350, 170);
+      image(imgHat2, 350, 150);
     }
   }
    if(keyIsPressed){
     if(keyCode == LEFT_ARROW && key == 'c'){
-      image(imgHat3, 350, 170);
+      image(imgHat3, 350, 150);
     }
   }
    if(keyIsPressed){
     if(keyCode == UP_ARROW && key == 'c'){
-      image(imgHat4, 350, 170);
+      image(imgHat4, 350, 150);
     }
   }
 
-  image(imgHair1, 350, 200);   //hair
+  image(imgHair1, 350, 175);
   if(keyIsPressed && key == 'h'){
-    image(imgHair5, 350, 200);
+    image(imgHair5, 350, 175);
   }
     if(keyIsPressed){
      if(keyCode == SHIFT && key == 'h'){
-    image(imgHair4, 350, 200);
+    image(imgHair4, 350, 175);
       }
     } 
 
-  image(imgBrows1, 350, 210); //brows
+  image(imgBrows1, 300, 212);
   if(keyIsPressed && key == 'b'){
-      image(imgBrows2, 350, 210);
+      image(imgBrows2, 300, 212);
   }
   if(keyIsPressed){
     if(keyCode == SHIFT && key == 'b'){
-        image(imgBrows3, 350, 210);
+        image(imgBrows3, 300, 212);
     }
   }
 
-  //facialHair
   if(keyIsPressed && key == 'f'){
     image(imgStache1, 350, 315);
   }
@@ -145,29 +138,25 @@ function draw() {
     }
   }
     
-  //glasses
   if(keyIsPressed && key == 'g'){
     image(imgGlasses1, 350, 250)
   }
-  
 }
 
 function drawBase(){
-
   beginShape();
   vertex(190, 420);
   vertex(510, 420);
   vertex(550, 600);
   vertex(150, 600);
-  endShape(CLOSE); //torso
-  rect(275, 370, 150, 100, 15); //neck
-  ellipse(350, 260, 270, 330); //head
-  
+  endShape(CLOSE);
+  rect(275, 370, 150, 100, 15);
+  ellipse(350, 260, 270, 330);
 }
 
 function eyes (){
   push();
-  ellipse(300, 250, 50, 30)
+  ellipse(300, 250, 50, 30);
   ellipse(400, 250, 50, 30);
   strokeWeight(6);
   fill('black');
@@ -175,27 +164,27 @@ function eyes (){
   circle(400, 250, 20);
   pop();
 }
-
 function smileSmol(){
   strokeWeight(0);
   rect(300, 300, 100, 100);
   strokeWeight(1);
   arc(350, 350, 40, 50, 0, radians(180));
 }
-
 function smileBig(){
   strokeWeight(0);
   rect(300, 300, 100, 100);
   strokeWeight(1);
   arc(350, 350, 50, 40, 0, radians(180));
 }
-
 function mouthNeutral(){
   line(320, 350, 390, 350);
   line(320, 340, 320, 360);
   line(390, 340, 390, 360);
 }
-
+function mouthMischief(){
+  line(320, 350, 350, 390);
+  line(400, 350, 350, 390);
+}
 function nose(){
   strokeWeight(0);
   rect(300, 300, 100, 100);
